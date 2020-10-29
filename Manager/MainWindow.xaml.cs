@@ -20,14 +20,30 @@ namespace Manager
     /// </summary>
     public partial class MainWindow : Window
     {
+        Page HomePage = new HomePage();
+        Page TeamPage = new TeamPage();
+        Page CompetitionPage = new CompetitionPage();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            MainFrame.Navigate(HomePage);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Home_Checked(object sender, RoutedEventArgs e)
         {
+            MainFrame.Navigate(HomePage);
+        }
 
+        private void Team_Checked(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(TeamPage);
+        }
+
+        private void Competition_Checked(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(CompetitionPage);
         }
     }
 }

@@ -7,11 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="164,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="surname" HorizontalAlignment="Left" Height="23" Margin="319,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="501,203,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="155,145,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="305,145,0,0" VerticalAlignment="Top"/>
+        <DockPanel HorizontalAlignment="Left" Height="20" LastChildFill="False" VerticalAlignment="Top" Width="383">
+            <Menu Height="20" VerticalAlignment="Top" Width="100">
+                <MenuItem Header="File" Height="20" Width="100">
+                    <MenuItem Header="Save" HorizontalAlignment="Left" Height="25" Width="140"/>
+                    <MenuItem Header="Load" HorizontalAlignment="Left" Height="25" Width="140"></MenuItem>
+                    <MenuItem Header="Exit" HorizontalAlignment="Left" Height="25" Width="140"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <RadioButton Content="Home" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" Checked="Home_Checked"/>
+        <RadioButton Content="Team" HorizontalAlignment="Left" Margin="142,42,0,0" VerticalAlignment="Top" Checked="Team_Checked"/>
+        <RadioButton Content="Competition" HorizontalAlignment="Left" Margin="269,42,0,0" VerticalAlignment="Top" Checked="Competition_Checked"/>
+        <RadioButton Content="Transfers" HorizontalAlignment="Left" Margin="413,42,0,0" VerticalAlignment="Top"/>
+        <Frame x:Name="MainFrame" HorizontalAlignment="Left" Height="334" Margin="21,75,0,0" VerticalAlignment="Top" Width="747" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

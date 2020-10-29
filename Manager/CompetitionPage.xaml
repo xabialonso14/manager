@@ -1,0 +1,28 @@
+﻿<Page x:Class="Manager.CompetitionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Manager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="League" Background="White">
+
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="223" Margin="77,81,0,0" VerticalAlignment="Top" Width="610">
+            <TabItem Header="League">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Cup">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="International Cup">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="National Team">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Page>
