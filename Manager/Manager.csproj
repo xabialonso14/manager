@@ -115,5 +115,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\de\names.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\en\surnames.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\en\names.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\de\surnames.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\pl\names.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\pl\surnames.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

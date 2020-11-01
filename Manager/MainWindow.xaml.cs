@@ -18,6 +18,7 @@ namespace Manager
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         Page HomePage = new HomePage();
