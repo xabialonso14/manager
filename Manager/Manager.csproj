@@ -84,17 +84,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CompetitionPage.xaml.cs">
+    <Compile Include="gui\CompetitionPage.xaml.cs">
       <DependentUpon>CompetitionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TeamPage.xaml.cs">
+    <Compile Include="gui\TeamPage.xaml.cs">
       <DependentUpon>TeamPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="HomePage.xaml">
+    <Compile Include="gui\TransfersPage.xaml.cs">
+      <DependentUpon>TransfersPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="gui\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CompetitionPage.xaml">
+    <Page Include="gui\CompetitionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,19 +109,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HomePage.xaml.cs">
+    <Compile Include="gui\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TeamPage.xaml">
+    <Page Include="gui\TeamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\TransfersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\Game.cs" />
+    <Compile Include="model\Player.cs" />
+    <Compile Include="model\Team.cs" />
+    <Compile Include="model\Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

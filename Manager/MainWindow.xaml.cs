@@ -21,15 +21,27 @@ namespace Manager
     
     public partial class MainWindow : Window
     {
-        Page HomePage = new HomePage();
-        Page TeamPage = new TeamPage();
-        Page CompetitionPage = new CompetitionPage();
+        public static HomePage HomePage = new HomePage();
+        public static TeamPage TeamPage = new TeamPage();
+        public static CompetitionPage CompetitionPage = new CompetitionPage();
+        public static TransfersPage TransfersPage = new TransfersPage();
 
         public MainWindow()
         {
             InitializeComponent();
+            HomePage_RadioButton.IsChecked = true;
+        }
 
-            MainFrame.Navigate(HomePage);
+        public void UpdateView()
+        {
+            turn_Label.Content = model.Game.turn;
+
+            TeamPage.UpdateView();
+        }
+
+        private void UpdateTurn(object sender)
+        {
+            
         }
 
         private void Home_Checked(object sender, RoutedEventArgs e)
@@ -46,10 +58,28 @@ namespace Manager
         {
             MainFrame.Navigate(CompetitionPage);
         }
+        private void Transfers_Checked(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(TransfersPage);
+        }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void SaveGame_Click(object sender, RoutedEventArgs e)
+        {
+            model.Game.SaveGame();
+        }
+        private void LoadGame_Click(object sender, RoutedEventArgs e)
+        {
+            model.Game.LoadGame();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            model.Game.NextRound();
         }
     }
 }

@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Microsoft.Win32;
-
+using Manager.model;
 
 
 namespace Manager
@@ -30,9 +30,9 @@ namespace Manager
         {
             InitializeComponent();
 
-
-            this.dataGrid2.ItemsSource = data_list.list;
+            //this.dataGrid2.ItemsSource = Game.MyTeam.Players;
         }
+
 
         public class DataObject
         {
@@ -44,6 +44,12 @@ namespace Manager
         static class data_list
         {
             public static ObservableCollection<DataObject> list = new ObservableCollection<DataObject>();
+        }
+
+        public void UpdateView()
+        {
+            MainWindow.TeamPage.dataGrid2.ItemsSource = model.Game.MyTeam.Players;
+
         }
 
         private void Button_get_random_Click(object sender, RoutedEventArgs e)
@@ -62,42 +68,7 @@ namespace Manager
                 str = "de";
             }
 
-            try
-            {
-                using (var text = new StreamReader("../../data/" + str + "/names.txt"))
-                {
-                    var rand = new Random();
-                    int ran = rand.Next(101);
-                    for (var a = 1; a < ran; a++)
-                    {
-                        var line = text.ReadLine();
-                        name.Text = line;
-                    }
-                }
-            }
-            catch (FileNotFoundException ex)
-            {
-                name.Text = ex.Message;
-            }
-            try
-            {
-                using (var text = new StreamReader("../../data/" + str + "/surnames.txt"))
-                {
-                    var rand = new Random();
-                    int ran = rand.Next(1001);
-                    for (var a = 1; a < ran; a++)
-                    {
-                        var line = text.ReadLine();
-                        surname.Text = line;
-                    }
-                }
-            }
-            catch (FileNotFoundException ex)
-            {
-                surname.Text = ex.Message;
-
-            }
-
+            Utilities.getRandomPlayer(str);
         }
 
         private void button_add_Click(object sender, RoutedEventArgs e)
@@ -114,28 +85,12 @@ namespace Manager
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            string jsonString;
-            jsonString = JsonSerializer.Serialize(data_list.list);
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Json file (*.json)|*.json|All files (*.*)|*.*";
-            //saveFileDialog.InitialDirectory = @"c:\temp\";
-            if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, jsonString);
+            Game.SaveGame();
         }
 
         private void load_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
-            //saveFileDialog.InitialDirectory = @"c:\temp\";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                string text = File.ReadAllText(openFileDialog.FileName);
-                var a = JsonSerializer.Deserialize<ObservableCollection<DataObject>>(text);
-                data_list.list = a;
-                this.dataGrid2.ItemsSource = data_list.list;
-
-            }
+            Game.LoadGame();
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
