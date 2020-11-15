@@ -10,7 +10,7 @@
         <DockPanel HorizontalAlignment="Left" Height="20" LastChildFill="False" VerticalAlignment="Top" Width="383">
             <Menu Height="20" VerticalAlignment="Top" Width="100">
                 <MenuItem Header="File" Height="20" Width="100">
-                    <MenuItem Header="Save" HorizontalAlignment="Left" Height="25" Width="140"/>
+                    <MenuItem Header="Save" HorizontalAlignment="Left" Height="25" Width="140" Click="MenuItem_Click"/>
                     <MenuItem Header="Load" HorizontalAlignment="Left" Height="25" Width="140"></MenuItem>
                     <MenuItem Header="Exit" HorizontalAlignment="Left" Height="25" Width="140"/>
                 </MenuItem>
