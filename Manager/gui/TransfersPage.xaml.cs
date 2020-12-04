@@ -28,13 +28,13 @@ namespace Manager
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
 
             using (var text = new StreamReader(Properties.Resources.ResourceManager.GetString("a")))
             {
                 var line = text.ReadLine();
                 test_label.Content = line;
-            }
+            }*/
         }
     }
 }

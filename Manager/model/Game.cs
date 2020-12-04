@@ -38,7 +38,7 @@ namespace Manager.model
                 string text = File.ReadAllText(openFileDialog.FileName);
                 var a = JsonSerializer.Deserialize<ObservableCollection<Player>>(text);
                 MyTeam.Players = a;
-
+                //MainWindow.TeamPage.dataGrid2.ItemsSource = Game.MyTeam.Players;
                 ((MainWindow)Application.Current.MainWindow).UpdateView();
                 //MainWindow.TeamPage.dataGrid2.ItemsSource = MyTeam.Players;
 

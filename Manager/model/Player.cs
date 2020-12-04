@@ -8,17 +8,17 @@ namespace Manager.model
 {
     class Player
     {
-        public Player(string imię, string nazwisko, int umiejętność, string narodowość)
+        public Player(string name, string surname, int skill, string nationality)
         {
-            this.imię = imię;
-            this.nazwisko = nazwisko;
-            this.umiejętność = umiejętność;
-            this.narodowość = narodowość;
+            this.name = name;
+            this.surname = surname;
+            this.skill = skill;
+            this.nationality = nationality;
         }
 
-        public string imię { get; set; }
-        public string nazwisko { get; set; }
-        public int umiejętność { get; set; }
-        public string narodowość { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public int skill { get; set; }
+        public string nationality { get; set; }
     }
 }

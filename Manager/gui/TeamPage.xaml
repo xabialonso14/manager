@@ -13,26 +13,26 @@
             <RowDefinition Height="17*"/>
             <RowDefinition Height="28*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="7,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="surname" HorizontalAlignment="Left" Height="23" Margin="185,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  TextDecorations="{x:Null}"/>
-        <Button x:Name="Button_get_random" Content="Losuj" HorizontalAlignment="Left" Margin="356,58,0,0" VerticalAlignment="Top" Width="74" Click="Button_get_random_Click"/>
-        <RadioButton x:Name="Polish_Radio_Button" Content="Polska" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="117"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Left" Height="23" Margin="143,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  TextDecorations="{x:Null}"/>
+        <Button x:Name="Button_get_random" Content="Add specfic player declared above" HorizontalAlignment="Left" Margin="268,93,0,0" VerticalAlignment="Top" Width="189" Click="Button_get_random_Click" Height="23"/>
+        <RadioButton x:Name="Polish_Radio_Button" Content="Poland" HorizontalAlignment="Left" Height="18" Margin="346,28,0,0" VerticalAlignment="Top" Width="118"/>
 
-        <RadioButton x:Name="English_Radio_Button" Content="Anglia" HorizontalAlignment="Left" Height="31" Margin="127,10,0,0" VerticalAlignment="Top" Width="136"/>
+        <RadioButton x:Name="English_Radio_Button" Content="England" HorizontalAlignment="Left" Height="17" Margin="346,65,0,0" VerticalAlignment="Top" Width="136"/>
 
-        
-        <RadioButton x:Name="German_Radio_Button" Content="Niemcy" HorizontalAlignment="Left" Height="31" Margin="263,10,0,0" VerticalAlignment="Top" Width="136"/>
-        <Button x:Name="button_add" Content="Dodaj" HorizontalAlignment="Left" Height="27" Margin="675,105,0,0" VerticalAlignment="Top" Width="75" Click="button_add_Click"/>
-        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" Height="38" Margin="636,29,0,0" VerticalAlignment="Top" Width="114" Click="save_Click"/>
-        <Button x:Name="load" Content="Load" HorizontalAlignment="Left" Height="38" Margin="456,29,0,0" VerticalAlignment="Top" Width="123" Click="load_Click"/>
-        <Button x:Name="clear" Content="Clear" HorizontalAlignment="Left" Height="22" Margin="636,248,0,0" VerticalAlignment="Top" Width="114" Click="clear_Click" Grid.Row="1"/>
-        <Button x:Name="generate" Content="Generuj całą drużynę" HorizontalAlignment="Left" Height="38" Margin="73,86,0,0" VerticalAlignment="Top" Width="166" Click="generate_Click"/>
-        <ScrollViewer x:Name="scroll" HorizontalAlignment="Left" Height="281" Margin="46,137,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="704">
-            <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="704" Grid.RowSpan="2" IsEnabled="False">
+
+        <RadioButton x:Name="German_Radio_Button" Content="Germeny" HorizontalAlignment="Left" Height="19" Margin="346,46,0,0" VerticalAlignment="Top" Width="136"/>
+        <Button x:Name="clear" Content="Clear" HorizontalAlignment="Left" Height="22" Margin="46,253,0,0" VerticalAlignment="Top" Width="114" Click="clear_Click" Grid.Row="1"/>
+        <Button x:Name="generate" Content="Generate whole 20 player team" HorizontalAlignment="Left" Height="38" Margin="73,86,0,0" VerticalAlignment="Top" Width="181" Click="generate_Click"/>
+        <ScrollViewer x:Name="scroll" HorizontalAlignment="Left" Height="281" Margin="46,137,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="384" IsEnabled="False">
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="704" Grid.RowSpan="2" IsEnabled="False">
                 <DataGrid.Columns>
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="10,21,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="78"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="143,21,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Width="78"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="280,21,0,0" TextWrapping="Wrap" Text="Nationality" VerticalAlignment="Top" Width="78"/>
 
     </Grid>
 </Page>
